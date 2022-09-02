@@ -1,3 +1,7 @@
+### 项目介绍
+使用C++11作为服务端开发语言，完成了一个简单的多线程HTTP服务器，支持静态资源的访问，支持高性能异步日志。
+
+### 编译、执行
 * build
 
     ```C++
@@ -16,20 +20,16 @@
     ip:9006
     ```
 
-个性化运行
-------
+### 个性化运行
 
 ```C++
-./server [-p port] [-l LOGWrite] [-m TRIGMode] [-o OPT_LINGER] [-s sql_num] [-t thread_num] [-c close_log] [-a actor_model]
+./server [-p port] [-m TRIGMode] [-o OPT_LINGER] [-s sql_num] [-t thread_num] [-c close_log] [-a actor_model]
 ```
 
-温馨提示:以上参数不是非必须，不用全部使用，根据个人情况搭配选用即可.
+以上参数不是非必须，不用全部使用，根据个人情况搭配选用即可.
 
 * -p，自定义端口号
 	* 默认9006
-* -l，选择日志写入方式，默认同步写入
-	* 0，同步写入
-	* 1，异步写入
 * -m，listenfd和connfd的模式组合，默认使用LT + LT
 	* 0，表示使用LT + LT
 	* 1，表示使用LT + ET
